@@ -129,6 +129,10 @@
 		font-size: 20px;
 		font-style: normal;
 		font-weight: 800;
+		cursor: pointer;
+		&:hover {
+			animation: borderAnimation 1s forwards;
+		}
 	}
 	&__button {
 		width: 40px;
