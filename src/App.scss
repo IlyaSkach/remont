@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('./assets/Fonts/Gilroy-ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('./assets/Fonts/Gilroy-Light.otf') format('opentype');
+  font-weight: normal; /* Легкий вес шрифта */
+  font-style: normal;
+}
+
+body {
+  font-family: 'MyFont', sans-serif;
+}

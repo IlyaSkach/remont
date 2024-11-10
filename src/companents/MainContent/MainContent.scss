@@ -1,0 +1,531 @@
+.main-content-wrapper {
+	position: relative;
+	z-index: 2; /* Выше по уровню */
+}
+
+.text-white {
+	// color: #fff !important;
+	.title,
+	.main-content__button {
+		color: white;
+	}
+	.desc {
+		color: transparent;
+		-webkit-text-stroke: 1px white; /* Черная окантовка */
+	}
+
+	.header {
+		a, /* Обращение ко всем ссылкам в header */
+		.header__map svg path, /* Цвет для иконок в кнопках */
+		.header__logo svg path,
+		.header__phone svg path {
+			color: #fff;
+			fill: #fff !important;
+		}
+	}
+}
+
+.desc {
+	color: transparent;
+	font-size: 64px;
+	font-style: normal;
+	font-weight: 800;
+	-webkit-text-stroke: 1px #000; /* Черная окантовка */
+}
+
+.main-content {
+	text-align: center;
+	// padding: 50px 0;
+	position: relative; /* Добавляем относительное позиционирование */
+
+	h1 {
+		color: #222222;
+		font-size: 64px;
+		font-style: normal;
+		font-weight: 800;
+		line-height: 0px;
+	}
+
+	span {
+		color: #fff; /* Белый цвет текста */
+		font-size: 64px;
+		font-style: normal;
+		font-weight: 800;
+		// -webkit-text-stroke: 1px #000; /* Черная окантовка */
+	}
+
+	&__button {
+		position: relative;
+		padding: 10px 40px;
+		font-size: 16px;
+		border: 1px solid  #2222224D;
+		background-color: transparent;
+		cursor: pointer;
+		margin-bottom: 100px;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 46%;
+			left: 0%;
+			transform: translateX(-50%);
+			width: 25px; /* Длина линии */
+			height: 1px; /* Толщина линии */
+			background-color: #000; /* Цвет линии */
+		}
+
+		&:hover {
+			animation: borderAnimation 1s forwards;
+		}
+	}
+
+	
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-color: #2222224D;
+  }
+  25% {
+    border-top-color: #222222;
+  }
+  50% {
+    border-right-color: #222222;
+  }
+  75% {
+    border-bottom-color: #222222;
+  }
+  100% {
+    border-color: #222222;
+  }
+}
+
+.servicessection {
+	background-image: url("../../assets/img/1.png"); /* Укажите правильный путь к вашей картинке */
+	background-size: cover; /* Картинка будет покрывать всю секцию */
+	background-position: center; /* Центрируем картинку */
+	background-repeat: no-repeat; /* Картинка не будет повторяться */
+	padding: 1px 0; /* Добавляем отступы для секции */
+	color: #fff; /* Цвет текста */
+	text-align: center; /* Выравниваем текст по центру */
+	min-height: 100%; /* Минимальная высота секции */
+}
+
+.servicessection.no-background {
+	background-image: none; /* Убираем фон */
+}
+
+.services {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 176px;
+
+	&__item {
+		flex: 1;
+		text-align: center;
+		padding: 30px 20px;
+		border: 1px solid #ccc;
+		border-right: none;
+		color: #fff; /* Белый цвет текста */
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 800;
+	}
+	&__button {
+		width: 40px;
+		height: 40px;
+		border-radius: 50%; /* Делаем кнопку круглой */
+		background-color: transparent;
+		color: #fff; /* Цвет текста кнопки */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid #ebebeb; /* Убираем границу */
+		cursor: pointer; /* Курсор указателя при наведении */
+		margin: 20px auto; /* Отступ сверху */
+
+		&:hover {
+			animation: borderAnimation 1s forwards;
+		}
+	}
+}
+
+.repair-services-background {
+	background-image: url("../../assets/img/2.png") !important;
+	background-size: cover;
+	background-position: center;
+}
+
+.work-types-background {
+	background-image: url("../../assets/img/3.png");
+	background-size: cover;
+	background-position: center;
+}
+
+.interior-design-background {
+	background-image: url("../../assets/img/4.png");
+	background-size: cover;
+	background-position: center;
+}
+
+.room-repair-background {
+	background-image: url("../../assets/img/5.png");
+	background-size: cover;
+	background-position: center;
+}
+
+.color-column {
+	position: absolute;
+	bottom: 81px;
+	width: 25.1%; /* Ширина столба равна ширине кнопки */
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	animation: rise 1s forwards; /* Анимация подъема */
+	color: #fff; /* Цвет текста */
+	font-size: 24px; /* Размер текста */
+	font-weight: bold; /* Жирный текст */
+	text-align: center; /* Выравнивание текста по центру */
+	z-index: 1; /* Устанавливаем z-index для цветного столба */
+
+	.column-title {
+		position: relative;
+		top: 30%;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 800;
+		margin: 0;
+		padding: 10px 0; /* Добавляем отступы */
+	}
+
+	.column-description {
+		position: relative;
+		top: 30%;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		margin: 0;
+		padding: 10px 0; /* Добавляем отступы */
+		white-space: normal; /* Разрешаем перенос текста */
+		max-width: 200px; /* Ограничиваем ширину для переноса текста */
+		word-wrap: break-word; /* Переносим длинные слова */
+		text-align: center; /* Выравнивание текста по центру */
+		display: -webkit-box; /* Добавляем для ограничения строк */
+		-webkit-line-clamp: 4; /* Ограничиваем количество строк */
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis; /* Добавляем троеточие */
+	}
+}
+
+.color-column.repair {
+	left: 0%; /* Позиционирование для кнопки "Услуги по ремонту" */
+	background-color: #eb5757; /* Цвет столба */
+}
+
+.color-column.work {
+	left: 25%; /* Позиционирование для кнопки "Виды работ" */
+	background-color: #219653;
+}
+
+.color-column.design {
+	left: 50%; /* Позиционирование для кнопки "Дизайн интерьера" */
+	background-color: #2f80ed; /* Цвет столба */
+}
+
+.color-column.room {
+	left: 75%; /* Позиционирование для кнопки "Ремонт помещений" */
+	background-color: #9b51e0; /* Цвет столба */
+}
+
+.back-button {
+	position: relative;
+	bottom: -37%;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%; /* Делаем кнопку круглой */
+	background-color: transparent;
+	color: #fff; /* Цвет текста кнопки */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #ebebeb; /* Убираем границу */
+	cursor: pointer; /* Курсор указателя при наведении */
+	// margin: 30px auto; /* Отступ сверху */
+
+	&:hover {
+		animation: borderAnimation 1s forwards;
+	}
+}
+
+@keyframes rise {
+	from {
+		height: 0;
+	}
+	to {
+		height: 100%;
+	}
+}
+
+/* Стили для десктопа (ширина больше 1200px) */
+// @media (min-width: 1200px) {
+//   .main-content {
+//     // padding: 50px 0;
+//   }
+
+//   .services {
+//     margin-top: 176px;
+//   }
+
+//   .services__item {
+//     font-size: 18px;
+//     padding: 30px 20px;
+//   }
+
+//   .color-column {
+//     font-size: 24px;
+//   }
+// }
+
+/* Стили для планшетов (ширина от 768px до 1200px) */
+// @media (max-width: 1199px) and (min-width: 768px) {
+//   .main-content-wrapper h1 {
+//     font-size: 48px;
+//   }
+
+//   .desc {
+//     font-size: 48px;
+//   }
+
+//   // .services__item {
+//   //   font-size: 18px;
+//   //   padding: 20px 10px;
+//   // }
+
+//   .color-column {
+//     font-size: 20px;
+//   }
+
+//   .column-title {
+//     font-size: 18px;
+//   }
+
+//   .column-description {
+//     font-size: 14px;
+//     max-width: 160px;
+//   }
+// }
+
+/* Стили для мобильных устройств (ширина меньше 768px) */
+// @media (max-width: 767px) {
+//   .main-content-wrapper h1 {
+//     font-size: 32px;
+//   }
+
+//   .desc {
+//     font-size: 32px;
+//     -webkit-text-stroke: 1px #000;
+//   }
+
+//   .services {
+//     // flex-direction: column;
+//     margin-top: 50px;
+//   }
+
+//   .services__item {
+//     font-size: 10px;
+//     padding: 15px 10px;
+//     border-right: none;
+//     border-bottom: 1px solid #ccc;
+//   }
+
+//   .color-column {
+//     font-size: 16px;
+//     width: 80%;
+//     left: 10%; /* Центрируем колонку */
+//     height: auto;
+//   }
+
+//   .column-title {
+//     font-size: 16px;
+//   }
+
+//   .column-description {
+//     font-size: 12px;
+//     max-width: 100%;
+//   }
+
+//   .main-content__button {
+//     padding: 8px 20px;
+//     font-size: 14px;
+//   }
+
+//   .back-button {
+//     width: 30px;
+//     height: 30px;
+//   }
+// }
+
+// @media (max-width: 1199px) and (min-width: 768px) {
+//   .services__item {
+//     font-size: 16px;
+//   }
+// 	.main-content-wrapper h1 {
+//     font-size: 48px;
+//   }
+
+//   .desc {
+//     font-size: 48px;
+//   }
+// }
+
+// /* Стили для мобильных устройств (ширина меньше 768px) */
+// @media (max-width: 767px) {
+//   .services__item {
+//     font-size: 10px;
+//   }
+// }
+
+@media (max-width: 1268px) {
+	.services__item {
+		font-size: 18px;
+		padding: 20px 10px;
+	}
+
+	.main-content__button {
+		padding: 10px 30px;
+		font-size: 14px;
+	}
+
+	.main-content-wrapper h1 {
+		font-size: 48px;
+	}
+
+	.main-content {
+		span {
+			font-size: 48px;
+		}
+	}
+
+	.desc {
+		font-size: 48px;
+	}
+	.color-column {
+		.column-title {
+			// top: 280px;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 800;
+			margin: 0;
+			padding: 10px 0; /* Добавляем отступы */
+		}
+
+		.column-description {
+			// top: 280px;
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 400;
+			margin: 0;
+			padding: 10px 0; /* Добавляем отступы */
+		}
+	}
+
+	.back-button {
+		position: relative;
+		// top: 280px;
+		width: 30px;
+		height: 30px;
+		// margin: 30px auto; /* Отступ сверху */
+	}
+}
+
+@media (max-width: 768px) {
+	.services__item {
+		font-size: 10px;
+		padding: 15px 10px;
+	}
+
+	.main-content-wrapper h1 {
+		font-size: 32px;
+	}
+
+	.main-content {
+		span {
+			font-size: 32px;
+		}
+	}
+
+	.main-content__button {
+		padding: 10px 20px;
+		font-size: 12px;
+	}
+
+	.desc {
+		font-size: 32px;
+		-webkit-text-stroke: 1px #000;
+	}
+
+	.color-column {
+		.column-title {
+			// top: 270px;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 800;
+			margin: 0;
+			padding: 10px 0; /* Добавляем отступы */
+		}
+
+		.column-description {
+			// top: 270px;
+			font-size: 10px;
+			font-style: normal;
+			font-weight: 400;
+			margin: 0;
+			padding: 10px 0; /* Добавляем отступы */
+		}
+	}
+
+	.back-button {
+		position: relative;
+		// top: 255px;
+		width: 20px;
+		height: 20px;
+		// margin: 30px auto; /* Отступ сверху */
+	}
+}
+
+
+
+// @media (max-width: 436px) {
+// 	.color-column {
+// 		.column-title {
+// 			// top: 250px;
+// 			font-size: 14px;
+// 			font-style: normal;
+// 			font-weight: 800;
+// 			margin: 0;
+// 			padding: 10px 0; /* Добавляем отступы */
+// 		}
+
+// 		.column-description {
+// 			// top: 250px;
+// 			font-size: 10px;
+// 			font-style: normal;
+// 			font-weight: 400;
+// 			margin: 0;
+// 			padding: 10px 0; /* Добавляем отступы */
+// 		}
+// 	}
+
+	// .back-button {
+
+	// 	bottom: -35%;
+
+	// }
+
+// 	.main-content__button {
+// 		padding: 10px 15px;
+// 		font-size: 10px;
+// 	}
+// }
