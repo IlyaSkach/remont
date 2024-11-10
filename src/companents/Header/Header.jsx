@@ -83,7 +83,7 @@ function Header() {
             />
           </svg>
         </div>
-        <button className="header__nav-button">Цены</button>
+        <a href="#">Цены</a>
         <a href="#">Портфолио</a>
         <a href="#">Контакты</a>
       </nav>
