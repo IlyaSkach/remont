@@ -5,17 +5,37 @@
 
 .text-white {
 	// color: #fff !important;
-	.title,
+	.title {
+		color: #fff !important;
+	}
 	.main-content__button {
 		color: white;
+		border: 1px solid white;
 	}
 	.desc {
 		color: transparent;
-		-webkit-text-stroke: 1px white; /* Черная окантовка */
+		-webkit-text-stroke: 2px white; /* Черная окантовка */
 	}
 
 	.header {
-		a, /* Обращение ко всем ссылкам в header */
+		a {
+			color: #FFFFFFB2;
+			&:hover {
+        color: white;
+				font-weight: 800;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -34px; /* Располагаем полоску внизу */
+          width: 100%;
+          height: 2px;
+          background-color: white;
+        }
+      }
+		}
+
 		.header__map svg path, /* Цвет для иконок в кнопках */
 		.header__logo svg path,
 		.header__phone svg path {
@@ -186,7 +206,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	animation: rise 1s forwards; /* Анимация подъема */
+	// animation: rise 1s forwards; /* Анимация подъема */
 	color: #fff; /* Цвет текста */
 	font-size: 24px; /* Размер текста */
 	font-weight: bold; /* Жирный текст */
@@ -207,12 +227,13 @@
 		position: relative;
 		top: 30%;
 		font-size: 14px;
+		line-height: 22px;
 		font-style: normal;
 		font-weight: 400;
 		margin: 0;
 		padding: 10px 0; /* Добавляем отступы */
 		white-space: normal; /* Разрешаем перенос текста */
-		max-width: 200px; /* Ограничиваем ширину для переноса текста */
+		max-width: 215px; /* Ограничиваем ширину для переноса текста */
 		word-wrap: break-word; /* Переносим длинные слова */
 		text-align: center; /* Выравнивание текста по центру */
 		display: -webkit-box; /* Добавляем для ограничения строк */
@@ -222,6 +243,8 @@
 		text-overflow: ellipsis; /* Добавляем троеточие */
 	}
 }
+
+
 
 .color-column.repair {
 	left: 0%; /* Позиционирование для кнопки "Услуги по ремонту" */
@@ -414,6 +437,7 @@
 
 	.desc {
 		font-size: 48px;
+		
 	}
 	.color-column {
 		.column-title {
@@ -432,6 +456,7 @@
 			font-weight: 400;
 			margin: 0;
 			padding: 10px 0; /* Добавляем отступы */
+			line-height: 15px;
 		}
 	}
 
@@ -468,6 +493,7 @@
 	.desc {
 		font-size: 32px;
 		-webkit-text-stroke: 1px #000;
+		
 	}
 
 	.color-column {
@@ -487,6 +513,7 @@
 			font-weight: 400;
 			margin: 0;
 			padding: 10px 0; /* Добавляем отступы */
+			line-height: 15px;
 		}
 	}
 
